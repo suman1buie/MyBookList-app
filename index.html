@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/yeti/bootstrap.min.css"
+    />
+    <style>
+      #submit-btn:hover {
+        background-color: darkblue;
+        color: white;
+        font-size: large;
+      }
+    </style>
+    <title>My Book List</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-4 text-center">
+        <i class="fas fa-book-open text-primary"></i>
+        My <span class="text-primary"> Book</span>List
+      </h1>
+
+      <form id="book-form">
+        <div class="form-group">
+          <label for="Name">Name</label>
+          <input type="text" id="Name" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="Author">Author</label>
+          <input type="text" id="Author" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="BookId">BookId</label>
+          <input type="text" id="BookId" class="form-control" />
+        </div>
+        <input
+          type="submit"
+          value="Add Book"
+          class="btn btn-primary btn-block"
+          id="submit-btn"
+        />
+      </form>
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>BookId</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
